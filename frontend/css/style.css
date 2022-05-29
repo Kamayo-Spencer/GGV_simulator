@@ -1,0 +1,30 @@
+.header{
+    background-color: rgb(119, 78, 78);
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+
+}
+.title{
+    margin-top: 10px;
+}
+.actions ul{
+    display: flex;
+    list-style: none;
+}
+.actions ul li{
+    margin: -10px 5px 5px 10px;
+    padding-right:10px ;
+    
+}
+.actions ul li a{
+    color: black;
+    list-style: none;
+}
+#map {
+    
+    height: 700px;
+    width: 100%;
+}
