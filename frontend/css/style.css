@@ -14,17 +14,28 @@
     display: flex;
     list-style: none;
 }
-.actions ul li{
+.actions ul div{
     margin: -10px 5px 5px 10px;
     padding-right:10px ;
     
 }
-.actions ul li a{
+.actions ul div a{
     color: black;
     list-style: none;
 }
 #map {
     
     height: 700px;
-    width: 100%;
+    width: 80%;
+}
+.add_form{
+    display: inline-block;
+    width: 20%;
+}
+.thisBody{
+    background-color: skyblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }

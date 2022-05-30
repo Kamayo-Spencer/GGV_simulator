@@ -1,4 +1,3 @@
-const { read } = require("fs");
 const Transmitter = require("../models/receiverInfo");
 
 // Add a receiver

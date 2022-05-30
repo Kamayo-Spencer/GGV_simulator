@@ -3,12 +3,21 @@ const cors = require('cors');
 const express = require('express');
 const bodyParser = require("body-parser");
 
-
+const path = require('path')
 require("dotenv/config");
-const app = express();
-app.use(cors());
 
+var corsOptions = {
+    origin: "http://localhost:5000"
+}
+
+const app = express();
+require("./routes/routes.js")(app);
+app.use(cors(corsOptions));
+app.use(express.json())
+
+const dbase = require("./models/receiverInfo.js")
 // console.log(process.env.MONGODB_URL)
+// dbase.
 mongoose
 .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
@@ -22,11 +31,20 @@ db.once("open", ()=>{
     console.log("database connected successfully");
 })
 
-const home = require("../frontend/index.html")
+// const home = require("../frontend/index.html")
 app.get("/", (req, res) => {
-    return res.sendFile("../frontend/index.html", {root: __dirname});
+    return res.sendFile(path.join(path.resolve(), "../frontend/index.html"));
   });
-app.listen(3001,() => {
-    console.log('serve at http://localhost:3001');
+
+app.get("/add", (req, res) => {
+    return res.sendFile(path.join(path.resolve(), "../frontend/add.html"));
+});
+
+app.get("/add", (req, res) => {
+    return res.sendFile(path.join(path.resolve(), "../frontend/remove.html"));
+});
+
+app.listen(5000,() => {
+    console.log('serve at http://localhost:5000');
 })
 
