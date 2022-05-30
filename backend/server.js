@@ -40,7 +40,7 @@ app.get("/add", (req, res) => {
     return res.sendFile(path.join(path.resolve(), "../frontend/add.html"));
 });
 
-app.get("/add", (req, res) => {
+app.get("/remove", (req, res) => {
     return res.sendFile(path.join(path.resolve(), "../frontend/remove.html"));
 });
 
