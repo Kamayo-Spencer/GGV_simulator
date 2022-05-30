@@ -3,7 +3,7 @@ module.exports = app =>{
     var router = require('express').Router();
 
     router.post("/add",  Transmitter.add);
-    router.delete("/:id",Transmitter.delete);
+    router.delete("/:id",Transmitter.deleteTransmitter);
 
     app.use('/api/tasks', router)
     
