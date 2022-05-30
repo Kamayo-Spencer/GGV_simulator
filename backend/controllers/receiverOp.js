@@ -1,5 +1,7 @@
 const Transmitter = require("../models/receiverInfo");
 
+// Get information from the database
+
 // Add a receiver
 const add = (req, res) => {
   // Validating request
@@ -25,6 +27,7 @@ const add = (req, res) => {
       });
     });
 };
+
 // Removing receivers one by one
 const deleteTransmitter = (req, res) => {
   const lat = req.body.latitude;
@@ -44,6 +47,15 @@ const deleteTransmitter = (req, res) => {
     });
 };
 
+// Retrieve all information from the database
+const findTransmitters = (req, res) => {
+    const receivers = Transmitter.find({});
+    res.status(200).json({
+        success: true,
+        data: receivers,
+    })
+};
 
 
-module.exports = { add, deleteTransmitter };
+
+module.exports = { add, deleteTransmitter, findTransmitters };
