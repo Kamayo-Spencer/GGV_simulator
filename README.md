@@ -19,4 +19,37 @@ The backend will consist of a minimal UI to list, add and remove receivers and a
 You may choose any language and technology for your backend, for example NodeJS + Firebase, Django, Flask. The application should have a database to store the receiver data persistently.
 Your final solution (both front and back end) is to be deployed on Heroku.
 
+LIVE LINKS
+Deployed app: 
+Video Demonstration:
+BUILT WITH
+Frontend
+JavaScript
+HTML
+CSS
+Backend
+NodeJS
+Express
+MongoDB
+Swagger for documentation
+GETTING STARTED
+Prerequisites
+npm
+npm install npm@latest -g
+Installation
+Clone the repository
+git clone https://github.com/Kamayo-Spencer/GGV_simulator/
+Install NPM package
+npm install
+Create .env file and enter your database and port
+touch .env
+MONGOURL=your mongoDB connection link
+PORT=port_number
+USAGE
+Start the server
+npm start
+N:B. As normal HTML we open them with live server whereas here you do as follows: open browser
 
+localhost:5000
+AUTHOR
+Kamayo Spencer
